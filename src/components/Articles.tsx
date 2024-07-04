@@ -11,7 +11,7 @@ const Articles = () => {
 
     const fetchPosts = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/posts', {
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_RSS_API}/posts`, {
                 params: {
                     limit,
                     offset,
